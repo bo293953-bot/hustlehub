@@ -143,5 +143,21 @@
     © 2026 HustleHub Kenya
   </footer>
 
+<script>
+  const search = document.querySelector(".search");
+  const services = document.querySelectorAll(".service");
+
+  search.addEventListener("input", function () {
+    const query = search.value.toLowerCase();
+
+    services.forEach(service => {
+      const name = service.innerText.toLowerCase();
+
+      service.style.display =
+        name.includes(query) ? "block" : "none";
+    });
+  });
+</script>
+  
 </body>
 </html>
